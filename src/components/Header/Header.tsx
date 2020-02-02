@@ -4,10 +4,10 @@ import { Grid, Icon, Button } from 'semantic-ui-react';
 
 import IHeaderProps, { IHeaderLink }from './IHeaderProps';
 
-const HeaderSiteMapLink = (props: IHeaderLink[] )  =>
+const HeaderSiteMapLink = (props: { props: IHeaderLink[] } )  =>
   <Grid.Row>
     {
-      props.map((link) =>
+      props.props.map((link) =>
         <Grid.Column>
           <Link to={link.url}>{link.link}</Link>
         </Grid.Column>
@@ -29,10 +29,8 @@ const StaticBar = () =>
       </Grid.Row>
     </React.Fragment>
 
-
-
-const Header: React.StatelessComponent<IHeaderProps> = (props: IHeaderProps) => {
-  const site_map: IHeaderLink[] = props.links || [
+const Header = (props: { props: IHeaderProps }) => {
+  const site_map: IHeaderLink[] = props.props.links || [
     { link: 'Home', url: '/home' },
     { link: 'Store', url: '/store' },
     { link: 'About', url: '/about'},
@@ -50,7 +48,7 @@ const Header: React.StatelessComponent<IHeaderProps> = (props: IHeaderProps) => 
             <HeaderSiteMapLink props={site_map} />
           </Grid.Column>
           <Grid.Column>
-
+            <p>Hello!</p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
