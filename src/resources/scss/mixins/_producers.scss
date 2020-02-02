@@ -1,0 +1,35 @@
+@mixin produce_name_val_map($mapping) {
+    @each $classname, $mapped_val in $mapping {
+        .#{$classname} {
+            @each $property, $value in $mapped_val {
+                $property: $value;
+            }
+        }
+    }
+}
+
+@mixin std__color-mapper($colors) {
+    @each $name, $color in $colors {
+        .#{$name} {
+            background-color: $color;
+        }
+
+        .#{$name}-text {
+            color: $color;
+        }
+
+        .#{$name}-border {
+            border-color: $color;
+        }
+
+        @for $i from 1 to 5 {
+            .#{$name}.lighten-#{$i} {
+                background-color: lighten($color, $i * 5);
+            }
+            .#{$name}.lighten-#{$i} {
+                background-color: darken($color, $i * 5);
+            }
+        } 
+
+    }
+}

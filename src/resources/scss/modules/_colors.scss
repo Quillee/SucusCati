@@ -1,0 +1,39 @@
+$succ-green: #7A8A7F;
+$succ-blue: #A5B3BF;
+$succ-red: #F7FA9F;
+$succ-white: #F2F2F2;
+$succ-grey: #B2B2B2;
+$off-white: #E4E4E4;
+
+$map : (
+    "succ-green": $succ-green,
+    "succ-blue": $succ-blue,
+    "succ-red": $succ-red,
+    "succ-white": $succ-white,
+    "succ-grey": $succ-grey,
+    "succ-off-white": $off-white
+    );
+
+@each $name, $color in $map {
+    .#{$name} {
+        background-color: $color;
+    }
+
+    .#{$name}-text {
+        color: $color;
+    }
+
+    .#{$name}-border {
+        border-color: $color;
+    }
+
+    @for $i from 1 to 5 {
+        .#{$name}.lighten-#{$i} {
+            background-color: lighten($color, $i * 5);
+        }
+        .#{$name}.lighten-#{$i} {
+            background-color: darken($color, $i * 5);
+        }
+    } 
+
+}

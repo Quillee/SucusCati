@@ -1,0 +1,57 @@
+@font-face {
+    font-family: caviarDreams;
+    src: url(../fonts/caviar-dreams/CaviarDreams.ttf);
+  }
+  
+  @font-face {
+    font-family: caviarDreams_bold;
+    src: url(../fonts/caviar-dreams/CaviarDreams_Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: caviarDreams_italic;
+    src: url(../fonts/caviar-dreams/CaviarDreams_Italic.ttf);
+  }
+  
+  @font-face {
+    font-family: caviarDreams_bold_italic;
+    src: url(../fonts/caviar-dreams/CaviarDreams_BoldItalic.ttf);
+  }
+  
+  @font-face {
+    font-family: blackJack;
+    src: url(../fonts/black-jack/BLACKJAR.TTF);
+  }
+  
+  body {
+    font-family: caviarDreams;
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-family: blackJack;
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-family: blackJack;
+    font-size: 40;
+  }
+  
+  h3 {
+    font-family: blackJack;
+    font-size: 25;
+  }
+
+  $typeface: ("bold", "italicized", "regular");
+
+  
+  .bold {
+    font-family: caviarDreams_bold;
+    .smaller-txt {
+        font-size: 16px ;
+    }
+    .larger-txt {
+        font-size: 30px;
+    }
+  }
