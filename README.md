@@ -1,5 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Sucus Cati
+
+## Introduction
+
+A project that is inspired/stolen by my friend who designed [it](https://shaylawyche.wixsite.com/design/sucuscacti).
+
+Its a retail website for a Succulent/Cactus vendor.
+
+I used Create React App to quickly set up this project, as its more for fun and to learn React then an actual project that I want deployed.
+
+All feedback is welcome, but I probably won't actually act on it :)
+
+
+# Create React App
+
 ## Available Scripts
 
 In the project directory, you can run:
